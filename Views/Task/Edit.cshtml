@@ -1,0 +1,43 @@
+﻿@model TaskManagement.Models.TaskItem
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+   
+    <div class="form-container">
+        <form action="/Task/Edit" method="post" class="center=form">
+
+            <div class="form-group">
+                <label for="Title">TaskID</label>
+                <input type="text" id="TaskID" name="TaskID" class="form-control" value="@Model.TaskID" />
+            </div>
+
+            <div class="form-group">
+                <label for="Title">Title</label>
+                <input type="text" id="taskname" name="taskname" class="form-control" value="@Model.TaskName" />
+            </div>
+
+            <div class="form-group">
+                <label for="Description">Description</label>
+                <input type="text" id="description" name="description" class="form-control" value="@Model.Description" />
+            </div>
+
+            <div class="form-group">
+                <label for="Status">Status</label>
+                <input type="text" id="status" name="status" class="form-control" value="@Model.Status" />
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a href="@Url.Action("ShowTask","Task")" class="btn btn-secondary">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

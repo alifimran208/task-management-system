@@ -1,0 +1,45 @@
+﻿@model TaskManagement.Models.User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="/User/Edit" method="post" class="center=form">
+
+            <input type="hidden" id="Id" name="Id" class="form-control" value="@Model.Id" />
+
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" value="@Model.name" />
+            </div>
+
+            <div class="form-group">
+                <label for="Username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" value="@Model.username" />
+            </div>
+
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" value="@Model.password" />
+            </div>
+
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" value="@Model.email" />
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a href="@Url.Action("ShowTask","Task")" class="btn btn-secondary">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
